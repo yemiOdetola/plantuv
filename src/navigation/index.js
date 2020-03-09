@@ -11,7 +11,6 @@ import SignUp from '../screens/SignUp';
 import Settings from '../screens/Settings';
 import Welcome from '../screens/Welcome';
 
-
 const screens = createStackNavigator({
   Browse, Explore, Forgot, Login, Product, SignUp, Settings, Welcome
 }, {
