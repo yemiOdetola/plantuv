@@ -82,7 +82,7 @@ export class Forgot extends Component {
   }
 }
 
-const VALID_EMAIL = "yemiOtola@gmail.com";
+const VALID_EMAIL = "yemiotola@gmail.com";
 
 const styles = StyleSheet.create({
   forgot: {
