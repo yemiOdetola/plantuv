@@ -45,7 +45,7 @@ export default class Welcome extends React.Component {
     return (
       <KeyboardAvoidingView style={styles.login} behavior="padding">
         <Block padding={[theme.sizes.base, theme.sizes.base * 2]}>
-          <Text h1 bold>Login</Text>
+          <Text h2 bold>Login</Text>
           <Block middle>
             <Input
               label="Email"
@@ -68,7 +68,7 @@ export default class Welcome extends React.Component {
                 <Text bold white center>Login</Text>
               }
             </Button>
-            <Button onPress={() => { }}>
+            <Button onPress={() => { navigation.navigate('Forgot') }}>
               <Text gray caption center style={{ textDecorationLine: 'underline' }}>
                 Forgot your password?
               </Text>
