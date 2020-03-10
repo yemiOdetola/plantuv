@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, TextInput } from 'react-native'
-import { Icon } from 'expo';
+import { Ionicons } from '@expo/vector-icons';
 import Text from './Text';
 import Block from './Block';
 import Button from './Button';
@@ -31,9 +31,9 @@ export default class Input extends Component {
         onPress={() => this.setState({ toggleSecure: !toggleSecure })}>
         {
           rightLabel ? rightLabel :
-            <Icon.Ionicons
+            <Ionicons
               color={theme.colors.gray}
-              size={theme.sizes.font * 1.35}
+              size={theme.sizes.font * 1.25}
               name={!toggleSecure ? "md-eye" : "md-eye-off"}
             />
         }
@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
   },
   toggle: {
     position: 'absolute',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     width: theme.sizes.base * 2,
-    height: theme.sizes.base * 2,
+    height: theme.sizes.base * 1.75,
     top: theme.sizes.base,
     right: 0,
   }
