@@ -27,9 +27,7 @@ export default class Welcome extends React.Component {
       if (password !== VALID_PASSWORD) {
         errors.push('password');
       }
-
       this.setState({ errors, loading: false });
-
       if (!errors.length) {
         navigation.navigate("Browse");
       }
@@ -79,6 +77,7 @@ export default class Welcome extends React.Component {
     );
   }
 }
+
 const VALID_EMAIL = "yemiOtola@gmail.com";
 const VALID_PASSWORD = "12345";
 

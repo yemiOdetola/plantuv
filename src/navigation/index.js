@@ -4,18 +4,18 @@ import { theme } from '../constants'
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-// import Browse from '../screens/Browse';
-// import Explore from '../screens/Explore';
+import Browse from '../screens/Browse';
 import Forgot from '../screens/Forgot';
 import Login from '../screens/Login';
-// import Product from '../screens/Product';
 import Signup from '../screens/Signup';
-// import Settings from '../screens/Settings';
 import Welcome from '../screens/Welcome';
+// import Explore from '../screens/Explore';
+// import Product from '../screens/Product';
+// import Settings from '../screens/Settings';
 
 const screens = createStackNavigator({
-  // Browse, Explore, Product, Settings,
-  Welcome, Login, Signup, Forgot
+  //Explore, Product, Settings,
+  Welcome, Login, Signup, Forgot, Browse
 }, {
   defaultNavigationOptions: {
     headerStyle: {

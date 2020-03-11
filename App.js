@@ -5,6 +5,7 @@ import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import Navigation from './src/navigation';
 import { Block } from './src/components';
+import { theme } from './src/constants';
 
 const images = [
   require('./assets/icons/back.png'),
@@ -52,16 +53,19 @@ export default class App extends Component {
           onError={error => console.ward(error)}
           onFinish={() => this.setState({ isLoadingComplete: true })}
         >
-
         </AppLoading>
       )
     }
     return (
-      <Block white>
+      <Block style={styles.container}>
         <Navigation />
       </Block>
     );
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#FFF'
+  }
+});
