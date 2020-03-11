@@ -75,9 +75,9 @@ const explore = [
 ];
 
 const profile = {
-  username: 'Kriss',
-  location: 'Asia',
-  email: 'kriss@kriss.com',
+  username: 'yemiOdetola',
+  location: 'Africa',
+  email: 'yemiotola@gmail.com',
   avatar: require('../../assets/images/avatar.png'),
   budget: 5000,
   monthly_cap: 7000,

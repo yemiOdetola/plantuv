@@ -9,18 +9,18 @@ import Forgot from '../screens/Forgot';
 import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import Welcome from '../screens/Welcome';
+import Settings from '../screens/Settings';
 // import Explore from '../screens/Explore';
 // import Product from '../screens/Product';
-// import Settings from '../screens/Settings';
 
 const screens = createStackNavigator({
-  //Explore, Product, Settings,
-  Welcome, Login, Signup, Forgot, Browse
+  //Explore, Product,
+  Welcome, Login, Signup, Forgot, Browse, Settings
 }, {
   defaultNavigationOptions: {
     headerStyle: {
       // height: theme.sizes.base * 7,
-      backgroundColor: theme.colors.white, // or 'white
+      backgroundColor: 'theme.colors.white', // or 'white
       borderBottomColor: "transparent",
       elevation: 0,
     },
