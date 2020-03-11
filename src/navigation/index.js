@@ -10,12 +10,12 @@ import Login from '../screens/Login';
 import Signup from '../screens/Signup';
 import Welcome from '../screens/Welcome';
 import Settings from '../screens/Settings';
-// import Explore from '../screens/Explore';
+import Explore from '../screens/Explore';
 // import Product from '../screens/Product';
 
 const screens = createStackNavigator({
-  //Explore, Product,
-  Welcome, Login, Signup, Forgot, Browse, Settings
+  //, Product,
+  Welcome, Login, Signup, Forgot, Browse, Settings, Explore
 }, {
   defaultNavigationOptions: {
     headerStyle: {

@@ -6,7 +6,20 @@ import { theme, mocks } from '../constants';
 
 export default class Browse extends React.Component {
   state = {
-    active: 'Products'
+    active: 'Products',
+    categories: []
+  }
+
+  componentDidMount() {
+    this.setState({ categories: this.props.categories });
+  }
+
+  handleTab = tab => {
+    const { categories } = this.props;
+    const filtered = categories.filter(
+      category => category.tags.includes(tab.toLowerCase())
+    );
+    this.setState({ active: tab, categories: filtered });
   }
 
   renderTab(tab) {
@@ -19,7 +32,7 @@ export default class Browse extends React.Component {
           styles.tab,
           isActive ? styles.active : null
         ]}
-        onPress={() => this.setState({ active: tab })}
+        onPress={() => this.handleTab(tab)}
       >
         <Text size={16} medium gray={!isActive} secondary={isActive}>
           {tab}
@@ -29,8 +42,9 @@ export default class Browse extends React.Component {
   }
 
   render() {
-    const { profile, navigation, categories } = this.props;
+    const { profile, navigation } = this.props;
     const tabs = ['Products', 'Inspirations', 'Shop'];
+    const { categories } = this.state;
     return (
       <Block>
         <Block flex={false} row center space="between" style={styles.header}>
