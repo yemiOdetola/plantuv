@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 import { Button, Block, Text } from '../components';
 import { theme, mocks } from '../constants';
-import Entypo from 'react-native-vector-icons/Entypo';
 
 
 export default class Product extends React.Component {
