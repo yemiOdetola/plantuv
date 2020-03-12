@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Image, ScrollView, Switch, TextInput } from 'react-native';
+import { StyleSheet, Image, ScrollView, Switch, TextInput, TouchableOpacity } from 'react-native';
 import { Block, Text, Button, Divider, Input } from '../components';
 import { theme, mocks } from '../constants';
 
