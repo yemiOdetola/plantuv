@@ -54,7 +54,7 @@ export class Forgot extends Component {
     const hasErrors = key => errors.includes(key) ? styles.hasErrors : null;
     return (
       <KeyboardAvoidingView style={styles.forgot} behavior="padding">
-        <Block padding={[theme.sizes.base, theme.sizes.base * 2]}>
+        <Block style={styles.container} padding={[theme.sizes.base, theme.sizes.base * 2]}>
           <Text h2 bold>Forgot</Text>
           <Block middle>
             <Input
@@ -85,6 +85,9 @@ export class Forgot extends Component {
 const VALID_EMAIL = "yemiotola@gmail.com";
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   forgot: {
     flex: 1,
     justifyContent: 'center',

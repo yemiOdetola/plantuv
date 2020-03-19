@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   product: {
     paddingHorizontal: theme.sizes.base * 2,
     paddingVertical: theme.sizes.padding,
+    backgroundColor: theme.colors.white,
   },
   tag: {
     borderColor: theme.colors.gray2,

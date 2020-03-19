@@ -46,7 +46,7 @@ export default class Browse extends React.Component {
     const tabs = ['Products', 'Inspirations', 'Shop'];
     const { categories } = this.state;
     return (
-      <Block>
+      <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>Browse</Text>
           <Button onPress={() => navigation.navigate('Settings')}>
@@ -91,6 +91,9 @@ Browse.defaultProps = {
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   header: {
     paddingHorizontal: theme.sizes.base * 2,
   },
@@ -121,5 +124,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingHorizontal: theme.sizes.base * 2,
     marginBottom: theme.sizes.base * 3.5,
+    marginTop: theme.sizes.base,
   },
 });
