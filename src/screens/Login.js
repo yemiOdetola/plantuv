@@ -29,7 +29,7 @@ export default class Welcome extends React.Component {
       }
       this.setState({ errors, loading: false });
       if (!errors.length) {
-        navigation.navigate("Browse");
+        navigation.navigate("BrowseTab");
       }
     }, 500);
   }

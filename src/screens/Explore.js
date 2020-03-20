@@ -115,7 +115,6 @@ export class Explore extends Component {
   render() {
     const { route } = this.props;
     const { category } = route.params;
-    console.log(category);
     return (
       <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>

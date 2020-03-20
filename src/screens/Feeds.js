@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import { Stylesheet, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 
 export class Feeds extends Component {
   render() {
     return (
-      <div>
-
-      </div>
+      <>
+        <View>
+          <Text>Returning some jsx</Text>
+        </View>
+      </>
     )
   }
 }
-
-
 export default Feeds;

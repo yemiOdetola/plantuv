@@ -39,7 +39,7 @@ export default class Welcome extends React.Component {
         [
           {
             text: 'Continue', onPress: () => {
-              navigation.navigate('Browse')
+              navigation.navigate('BrowseTab')
             }
           }
         ],
