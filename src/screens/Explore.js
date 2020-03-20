@@ -113,8 +113,9 @@ export class Explore extends Component {
 
 
   render() {
-    const { navigation } = this.props
-    const category = navigation.getParam('category');
+    const { route } = this.props;
+    const { category } = route.params;
+    console.log(category);
     return (
       <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>
