@@ -52,6 +52,7 @@ function MainStackNavigator() {
       <Stack.Navigator
         initialRouteName="Welcome"
         screenOptions={defaultNavigationOptions}
+      // tabBarComponent={TabBar}
       >
         <Stack.Screen name="BrowseTab" component={BrowseTab}
           options={{
