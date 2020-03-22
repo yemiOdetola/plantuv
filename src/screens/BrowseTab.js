@@ -32,10 +32,10 @@ function BrowseTab() {
       })}
       tabBarOptions={{
         activeTintColor: theme.colors.primary,
-        inactiveTintColor: theme.colors.gray,
+        inactiveTintColor: theme.colors.black,
       }}>
-      <Tab.Screen name="Browse" component={Browse} />
       <Tab.Screen name="Feeds" component={Feeds} />
+      <Tab.Screen name="Browse" component={Browse} />
       <Tab.Screen name="Create" component={Edit} />
     </Tab.Navigator>
   );

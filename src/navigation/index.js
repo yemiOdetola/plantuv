@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Image, Button } from 'react-native';
+import { Image, Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { theme } from '../constants';
+import { theme, mocks } from '../constants';
 
 // import Browse from '../screens/Browse';
 import BrowseTab from '../screens/BrowseTab';
@@ -33,13 +33,13 @@ const defaultNavigationOptions = {
     marginLeft: theme.sizes.base / 1.75,
     paddingRight: theme.sizes.base,
   },
-  headerRight: () => (
-    <Button
-      onPress={() => alert('button vlicd')}
-      title="info"
-      color={theme.colors.gray2}
-    />
-  ),
+  // headerRight: () => (
+  //   <Button
+  //     onPress={() => alert('button vlicd')}
+  //     title="info"
+  //     color={theme.colors.gray2}
+  //   />
+  // ),
   headerRightContainerStyle: {
     alignItems: 'center',
     paddingRight: theme.sizes.base,
@@ -52,7 +52,6 @@ function MainStackNavigator() {
       <Stack.Navigator
         initialRouteName="Welcome"
         screenOptions={defaultNavigationOptions}
-      // tabBarComponent={TabBar}
       >
         <Stack.Screen name="BrowseTab" component={BrowseTab}
           options={{
@@ -76,6 +75,13 @@ function MainStackNavigator() {
   )
 }
 
+const styles = StyleSheet.create({
+  avatar: {
+    borderRadius: 15,
+    width: 30,
+    height: 30
+  }
+})
 
 // const screens = createStackNavigator({
 //   Welcome, Login, Signup, Forgot, Browse, Settings, Explore, Product
