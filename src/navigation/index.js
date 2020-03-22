@@ -13,6 +13,7 @@ import Welcome from '../screens/Welcome';
 import Settings from '../screens/Settings';
 import Explore from '../screens/Explore';
 import Product from '../screens/Product';
+import Feed from '../screens/Feed';
 
 const Stack = createStackNavigator();
 
@@ -70,6 +71,7 @@ function MainStackNavigator() {
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="Feed" component={Feed} />
       </Stack.Navigator>
     </NavigationContainer>
   )

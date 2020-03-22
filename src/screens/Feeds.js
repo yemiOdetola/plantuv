@@ -9,44 +9,36 @@ export class Feeds extends Component {
     const { navigation } = this.props;
     return (
       <Block style={styles.container}>
-        {/* <Block flex={false} row center space="between" style={styles.header}>
-          <Text h1 bold>Feeds</Text>
-        </Block> */}
         <ScrollView showsVerticalScrollIndicator={false} style={styles.explore}>
-          <Block center style={styles.feedsContainer}>
+          <Block center style={styles.feed}>
             <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}>
+              style={styles.overflowFix}
+              onPress={() => navigation.navigate('Feed')}>
               <Card center shadowDark style={styles.feedCard}>
                 <Image style={styles.cardImage} source={require('../../assets/images/plant.jpg')} />
                 <Text style={styles.title}>Profeller Garius</Text>
-                <Block flex={false} row center space="between" style={styles.tags}>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray2} />
-                      <Text style={styles.tagText}>Blog</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Hibiscus</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Healthy</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
                 <Text style={styles.description}>I want to add a border around my Text. I've done the following, I only want the border around the text, not the full width of the View...</Text>
                 <Block flex={false} row center space="between" style={styles.foot}>
+                  <Block flex={false} row center space="between" style={styles.tags}>
+                    <TouchableOpacity style={styles.tag}
+                      onPress={() => alert('liked')}>
+                      <Block flex={false} row center>
+                        <Text gray style={styles.tagText}>Blog</Text>
+                      </Block>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.tag}
+                      onPress={() => alert('liked')}>
+                      <Block flex={false} row center>
+                        <Text gray style={styles.tagText}>Blog</Text>
+                      </Block>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.tag}
+                      onPress={() => alert('liked')}>
+                      <Block flex={false} row center>
+                        <Text gray style={styles.tagText}>Blog</Text>
+                      </Block>
+                    </TouchableOpacity>
+                  </Block>
                   <TouchableOpacity style={styles.like}
                     onPress={() => alert('liked')}>
                     <Block flex={false} row center space="between">
@@ -59,194 +51,6 @@ export class Feeds extends Component {
               </Card>
             </TouchableOpacity>
           </Block>
-          <Block center style={styles.feedsContainer}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}>
-              <Card center shadowDark style={styles.feedCard}>
-                <Image style={styles.cardImage} source={require('../../assets/images/plant.jpg')} />
-                <Text style={styles.title}>Profeller Garius</Text>
-                <Block flex={false} row center space="between" style={styles.tags}>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray2} />
-                      <Text style={styles.tagText}>Blog</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Hibiscus</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Healthy</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-                <Text style={styles.description}>I want to add a border around my Text. I've done the following, I only want the border around the text, not the full width of the View...</Text>
-                <Block flex={false} row center space="between" style={styles.foot}>
-                  <TouchableOpacity style={styles.like}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center space="between">
-                      <Ionicons name="ios-thumbs-up"
-                        size={30} color={theme.colors.primary} />
-                      <Text style={styles.likeText}>Like</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-              </Card>
-            </TouchableOpacity>
-          </Block>
-
-          <Block center style={styles.feedsContainer}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}>
-              <Card center shadowDark style={styles.feedCard}>
-                <Image style={styles.cardImage} source={require('../../assets/images/plant.jpg')} />
-                <Text style={styles.title}>Profeller Garius</Text>
-                <Block flex={false} row center space="between" style={styles.tags}>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray2} />
-                      <Text style={styles.tagText}>Blog</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Hibiscus</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Healthy</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-                <Text style={styles.description}>I want to add a border around my Text. I've done the following, I only want the border around the text, not the full width of the View...</Text>
-                <Block flex={false} row center space="between" style={styles.foot}>
-                  <TouchableOpacity style={styles.like}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center space="between">
-                      <Ionicons name="ios-thumbs-up"
-                        size={30} color={theme.colors.primary} />
-                      <Text style={styles.likeText}>Like</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-              </Card>
-            </TouchableOpacity>
-          </Block>
-
-          <Block center style={styles.feedsContainer}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}>
-              <Card center shadowDark style={styles.feedCard}>
-                <Image style={styles.cardImage} source={require('../../assets/images/plant.jpg')} />
-                <Text style={styles.title}>Profeller Garius</Text>
-                <Block flex={false} row center space="between" style={styles.tags}>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray2} />
-                      <Text style={styles.tagText}>Blog</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Hibiscus</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Healthy</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-                <Text style={styles.description}>I want to add a border around my Text. I've done the following, I only want the border around the text, not the full width of the View...</Text>
-                <Block flex={false} row center space="between" style={styles.foot}>
-                  <TouchableOpacity style={styles.like}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center space="between">
-                      <Ionicons name="ios-thumbs-up"
-                        size={30} color={theme.colors.primary} />
-                      <Text style={styles.likeText}>Like</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-              </Card>
-            </TouchableOpacity>
-          </Block>
-
-          <Block center style={styles.feedsContainer}>
-            <TouchableOpacity
-              onPress={() => navigation.navigate('Login')}>
-              <Card center shadowDark style={styles.feedCard}>
-                <Image style={styles.cardImage} source={require('../../assets/images/plant.jpg')} />
-                <Text style={styles.title}>Profeller Garius</Text>
-                <Block flex={false} row center space="between" style={styles.tags}>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray2} />
-                      <Text style={styles.tagText}>Blog</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Hibiscus</Text>
-                    </Block>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.tag}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center>
-                      <Ionicons name="ios-pricetag"
-                        size={14} color={theme.colors.gray} />
-                      <Text style={styles.tagText}>Healthy</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-                <Text style={styles.description}>I want to add a border around my Text. I've done the following, I only want the border around the text, not the full width of the View...</Text>
-                <Block flex={false} row center space="between" style={styles.foot}>
-                  <TouchableOpacity style={styles.like}
-                    onPress={() => alert('liked')}>
-                    <Block flex={false} row center space="between">
-                      <Ionicons name="ios-thumbs-up"
-                        size={30} color={theme.colors.primary} />
-                      <Text style={styles.likeText}>Like</Text>
-                    </Block>
-                  </TouchableOpacity>
-                </Block>
-              </Card>
-            </TouchableOpacity>
-          </Block>
-
         </ScrollView>
         {/* {this.renderFooter()} */}
       </Block>
@@ -269,8 +73,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.white
   },
-  feedsContainer: {
+  feed: {
     marginVertical: 10,
+    // marginHorizontal: 5,
   },
   feedCard: {
     width: (width - (theme.sizes.padding * 2.75)),
@@ -280,7 +85,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: (width - (theme.sizes.padding * 2.75)),
-    height: 160,
+    height: 180,
     borderTopLeftRadius: 2.22,
     borderTopRightRadius: 2.22,
     marginBottom: 15,
@@ -289,13 +94,13 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     fontSize: 22,
     fontWeight: '600',
-    color: theme.colors.black,
+    color: theme.colors.black2,
     paddingTop: 10,
   },
   description: {
-    color: theme.colors.black,
-    marginBottom: 30,
-    fontSize: 15,
+    color: '#555',
+    marginTop: 15,
+    fontSize: 13,
   },
   likeText: {
     marginLeft: 5,
@@ -306,28 +111,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   foot: {
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     flexDirection: 'row',
     width: (width - (theme.sizes.padding * 2.75)),
-    paddingTop: 4,
+    paddingTop: 8,
     position: 'absolute',
     bottom: 10,
+    borderTopWidth: 1,
+    borderTopColor: '#eaeaea'
   },
   tags: {
-    width: (width - (theme.sizes.padding * 2.935)),
     justifyContent: 'flex-start',
     paddingHorizontal: 16,
     flexWrap: 'wrap',
     marginVertical: 8,
   },
   tag: {
-    padding: 6,
+    paddingVertical: 4,
+    paddingHorizontal: 10,
     marginRight: 8,
-    paddingLeft: 0,
+    borderWidth: 1,
+    borderRadius: 14,
+    borderColor: theme.colors.gray,
   },
   tagText: {
-    fontSize: 13,
+    fontSize: 11,
     marginLeft: 3,
-  }
+  },
+  overflowFix: {
+    height: '90%',
+  },
 })
 export default Feeds;
