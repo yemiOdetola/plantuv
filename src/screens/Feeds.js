@@ -29,13 +29,13 @@ export class Feeds extends Component {
                     <TouchableOpacity style={styles.tag}
                       onPress={() => alert('liked')}>
                       <Block flex={false} row center>
-                        <Text gray style={styles.tagText}>Blog</Text>
+                        <Text gray style={styles.tagText}>Ewuro</Text>
                       </Block>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.tag}
                       onPress={() => alert('liked')}>
                       <Block flex={false} row center>
-                        <Text gray style={styles.tagText}>Blog</Text>
+                        <Text gray style={styles.tagText}>Health</Text>
                       </Block>
                     </TouchableOpacity>
                   </Block>
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: (width - (theme.sizes.padding * 2.75)),
-    height: 180,
+    height: 190,
     borderTopLeftRadius: 2.22,
     borderTopRightRadius: 2.22,
     marginBottom: 15,
@@ -105,9 +105,10 @@ const styles = StyleSheet.create({
   likeText: {
     marginLeft: 5,
     fontSize: 15,
+    color: theme.colors.primary,
+    fontWeight: '500'
   },
   like: {
-    alignSelf: 'flex-start',
     paddingHorizontal: 16,
   },
   foot: {
@@ -117,8 +118,8 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     position: 'absolute',
     bottom: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#eaeaea'
+    // borderTopWidth: 1,
+    // borderTopColor: '#eaeaea'
   },
   tags: {
     justifyContent: 'flex-start',

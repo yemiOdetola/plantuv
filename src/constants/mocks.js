@@ -46,23 +46,47 @@ const categories = [
 const products = [
   {
     id: 1,
-    name: '16 Best Plants That Thrive In Your Bedroom',
-    description: 'Bedrooms deserve to be decorated with lush greenery just like every other room in the house – but it can be tricky to find a plant that thrives here. Low light, high humidity and warm temperatures mean only certain houseplants will flourish.',
-    tags: ['Interior', '27 m²', 'Ideas'],
+    name: 'Ocimum gratissimum - Scent leaf',
+    description: 'It is usually a homegrown shrub used mainly as spices for cooking delicacies due to its unique aromatic taste. Scent leaves are high in calcium,phophurus, iron, potassium, carbon and vitamin A . The scent leave has been reported to be rich in plants chemicals. Oil from the leaves has been shown to posses antiseptic, antibacterial, and antifungal activities.',
+    tags: ['Skin', 'Healthy', 'Family'],
     images: [
       require('../../assets/images/plants_1.png'),
       require('../../assets/images/plants_2.png'),
       require('../../assets/images/plants_3.png'),
-      // showing only 3 images, show +6 for the rest
       require('../../assets/images/plants_1.png'),
       require('../../assets/images/plants_2.png'),
       require('../../assets/images/plants_3.png'),
       require('../../assets/images/plants_1.png'),
       require('../../assets/images/plants_2.png'),
       require('../../assets/images/plants_3.png'),
-    ]
+    ],
   }
 ];
+
+const feedProposed = [
+  {
+    proposition: 'Scent leave aids digestion. If you are the type of person that eats late at night, it is likely you will experience indigestion and bloating. Scent leave has immense health beneﬁts such as easy bowel evacuation and weight management.',
+    by: 'Omolola Famodun',
+    by_img: require('../../assets/images/userA.png'),
+    upvotes: 4,
+    downvotes: 1,
+  },
+  {
+    proposition: 'It is used in the treatment of fungal infections, fever, cold and catarrh.Squeezed nchanwu leaves are applied on the skin for treating skin diseases and ringworm.',
+    by: 'Anonymous',
+    by_img: require('../../assets/images/userB.svg'),
+    upvotes: 44,
+    downvotes: 6,
+  },
+  {
+    proposition: 'anwu seeds can be infused for treating urinary infections,gonorrhoea infection, vaginal douches for vaginitis. From recent finding scent leaf has been found to be useful in the medication for people living with human immunodefficiency virus (HIV) and Acquired immune defficiency syndrom(AIDS).',
+    by: 'https://www.pharmanewsonline.com/',
+    by_img: require('../../assets/images/userA.png'),
+    upvotes: 9,
+    downvotes: 14,
+  },
+
+]
 
 const explore = [
   // images
@@ -90,4 +114,5 @@ export {
   explore,
   products,
   profile,
+  feedProposed
 }

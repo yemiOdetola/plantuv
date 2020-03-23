@@ -25,8 +25,8 @@ const defaultNavigationOptions = {
   },
   // gestureEnabled: true,
   title: '',
-  headerBackTitle: '',
   headerTitle: '',
+  headerBackTitle: '',
   headerBackTitleVisible: false,
   headerBackImage: () => <Image source={require('../../assets/icons/back.png')} />,
   headerLeftContainerStyle: {
@@ -34,13 +34,6 @@ const defaultNavigationOptions = {
     marginLeft: theme.sizes.base / 1.75,
     paddingRight: theme.sizes.base,
   },
-  // headerRight: () => (
-  //   <Button
-  //     onPress={() => alert('button vlicd')}
-  //     title="info"
-  //     color={theme.colors.gray2}
-  //   />
-  // ),
   headerRightContainerStyle: {
     alignItems: 'center',
     paddingRight: theme.sizes.base,
@@ -56,6 +49,7 @@ function MainStackNavigator() {
       >
         <Stack.Screen name="BrowseTab" component={BrowseTab}
           options={{
+            title: 'Browse',
             headerRight: () => (
               <Button
                 onPress={() => alert('Take me to my profile')}
@@ -71,7 +65,8 @@ function MainStackNavigator() {
         <Stack.Screen name="Settings" component={Settings} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="Feed" component={Feed} />
+        <Stack.Screen name="Feed" component={Feed}
+          options={{ title: 'foodie', headerTitle: 'Feed' }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
