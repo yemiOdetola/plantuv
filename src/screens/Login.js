@@ -29,9 +29,9 @@ export default class Welcome extends React.Component {
       }
       this.setState({ errors, loading: false });
       if (!errors.length) {
-        navigation.navigate("Browse");
+        navigation.navigate("BrowseTab");
       }
-    }, 2000);
+    }, 500);
   }
 
 
@@ -42,7 +42,7 @@ export default class Welcome extends React.Component {
 
     return (
       <KeyboardAvoidingView style={styles.login} behavior="padding">
-        <Block padding={[theme.sizes.base, theme.sizes.base * 2]}>
+        <Block style={styles.container} padding={[theme.sizes.base, theme.sizes.base * 2]}>
           <Text h2 bold>Login</Text>
           <Block middle>
             <Input
@@ -82,6 +82,9 @@ const VALID_EMAIL = "yemiOtola@gmail.com";
 const VALID_PASSWORD = "12345";
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   input: {
     borderRadius: 0,
     borderWidth: 0,

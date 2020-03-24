@@ -39,7 +39,7 @@ export default class Welcome extends React.Component {
         [
           {
             text: 'Continue', onPress: () => {
-              navigation.navigate('Browse')
+              navigation.navigate('BrowseTab')
             }
           }
         ],
@@ -56,7 +56,7 @@ export default class Welcome extends React.Component {
 
     return (
       <KeyboardAvoidingView style={styles.signup} behavior="padding">
-        <Block padding={[theme.sizes.base, theme.sizes.base * 2]}>
+        <Block style={styles.container} padding={[theme.sizes.base, theme.sizes.base * 2]}>
           <Text h2 bold>Sign Up</Text>
           <Block middle>
             <Input
@@ -102,6 +102,9 @@ export default class Welcome extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   signup: {
     flex: 1,
     justifyContent: 'center',

@@ -34,7 +34,7 @@ export default class Browse extends React.Component {
         ]}
         onPress={() => this.handleTab(tab)}
       >
-        <Text size={16} medium gray={!isActive} secondary={isActive}>
+        <Text size={16} medium black2={!isActive} secondary={isActive}>
           {tab}
         </Text>
       </TouchableOpacity>
@@ -46,7 +46,7 @@ export default class Browse extends React.Component {
     const tabs = ['Products', 'Inspirations', 'Shop'];
     const { categories } = this.state;
     return (
-      <Block>
+      <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>Browse</Text>
           <Button onPress={() => navigation.navigate('Settings')}>
@@ -91,6 +91,9 @@ Browse.defaultProps = {
 const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   header: {
     paddingHorizontal: theme.sizes.base * 2,
   },
@@ -100,17 +103,17 @@ const styles = StyleSheet.create({
   },
   tabs: {
     borderBottomColor: theme.colors.gray2,
-    borderBottomWidth: StyleSheet.hairLineWidth,  //for iOS : StyleSheet.hairLineWidth
+    borderBottomWidth: StyleSheet.hairLineWidth,
     marginVertical: theme.sizes.base,
     marginHorizontal: theme.sizes.base * 2,
   },
   tab: {
     marginRight: theme.sizes.base * 2,
-    paddingBottom: theme.sizes.base
+    paddingBottom: theme.sizes.base / 2,
   },
   active: {
     borderBottomColor: theme.colors.secondary,
-    borderBottomWidth: 3,
+    borderBottomWidth: 2,
   },
   category: {
     minWidth: (width - (theme.sizes.padding * 2.4) - theme.sizes.base) / 2,
@@ -121,5 +124,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingHorizontal: theme.sizes.base * 2,
     marginBottom: theme.sizes.base * 3.5,
+    marginTop: theme.sizes.base,
   },
 });

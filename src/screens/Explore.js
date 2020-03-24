@@ -113,10 +113,10 @@ export class Explore extends Component {
 
 
   render() {
-    const { navigation } = this.props
-    const category = navigation.getParam('category');
+    const { route } = this.props;
+    const { category } = route.params;
     return (
-      <Block>
+      <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>Explore</Text>
           {this.renderSearch()}
@@ -137,6 +137,9 @@ Explore.defaultProps = {
 const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   header: {
     paddingHorizontal: theme.sizes.base * 2,
     paddingBottom: theme.sizes.base / 1.5,

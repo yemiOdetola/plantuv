@@ -118,7 +118,7 @@ export class Welcome extends Component {
 
   render() {
     return (
-      <Block>
+      <Block style={styles.container}>
         <Block center bottom flex={0.4}>
           <Text h1 center bold>
             Your Home. <Text h1 primary> Greener.</Text>
@@ -157,6 +157,9 @@ Welcome.defaultProps = {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   textEnjoy: {
     marginTop: theme.sizes.padding
   },

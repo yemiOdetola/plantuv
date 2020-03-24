@@ -45,7 +45,7 @@ export class Settings extends Component {
     const { profile } = this.props;
     const { editing } = this.state;
     return (
-      <Block>
+      <Block style={styles.container}>
         <Block flex={false} row center space="between" style={styles.header}>
           <Text h1 bold>Settings</Text>
           <Button>
@@ -120,6 +120,9 @@ Settings.defaultProps = {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: theme.colors.white,
+  },
   header: {
     paddingHorizontal: theme.sizes.base * 2,
   },

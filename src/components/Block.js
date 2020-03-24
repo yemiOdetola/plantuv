@@ -96,7 +96,7 @@ export default class Block extends Component {
 
   render() {
     const { flex, row, column, center, middle, left, right, top, bottom, card,
-      shadow, color, space, padding, margin, animated, wrap, style, children, ...props } = this.props;
+      shadow, shadowDark, color, space, padding, margin, animated, wrap, style, children, ...props } = this.props;
 
     const blockStyles = [
       styles.block,
@@ -114,6 +114,7 @@ export default class Block extends Component {
       padding && { ...this.handlePaddings() },
       card && styles.card,
       shadow && styles.shadow,
+      shadowDark && styles.shadowDark,
       space && { justifyContent: `space-${space}` },
       wrap && { flexWrap: 'wrap' },
       color && styles[color], // predefined styles colors for backgroundColor
@@ -173,10 +174,20 @@ export const styles = StyleSheet.create({
   },
   shadow: {
     shadowColor: theme.colors.black,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 13,
-    elevation: 2,
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 1,
+  },
+  shadowDark: {
+    shadowColor: theme.colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 1,
   },
   accent: { backgroundColor: theme.colors.accent, },
   primary: { backgroundColor: theme.colors.primary, },
