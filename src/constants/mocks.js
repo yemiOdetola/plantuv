@@ -88,6 +88,14 @@ const feedProposed = [
 
 ]
 
+const product = {
+  medicinal: "Scent leave aids digestion. If you are the type of person that eats late at night, it is likely you will experience indigestion and bloating. Scent leave has immense health beneﬁts such as easy bowel evacuation and weight management. Scent leave can be used to treat stomach ache, diarrhoea, chronic dysentry and vomitin.The aqueos extracts of the scented leaf can be taken to relief ear ache and colon pains.Scent leaf decoction is used in treatment of mental illness. Scent leave can be used to treat oral infections.Say bye bye to smelly mouth as scent leave will kill all the bacteria in your mouth and also prevent tooth decay and bad breath. It is used in the treatment of fungal infections, fever, cold and catarrh.Squeezed nchanwu leaves are applied on the skin for treating skin diseases and ringworm. Nchanwu oil can be used as food preservative due to its anti- microbial and anti - bacterial properties. Scent leaves can also be used for the prevention and treatment of malaria, catarrh, cough and fever. The aqueous extracts of the scented leaf can be taken to relieve ear ache and colon pains.",
+  byName: 'Omolola Famodun',
+  proposition: 'Scent leave aids digestion. If you are the type of person that eats late at night, it is likely you will experience indigestion and bloating. Scent leave has immense health beneﬁts such as easy bowel evacuation and weight management',
+  upvotes: 33,
+  downvotes: 3,
+}
+
 const explore = [
   // images
   require('../../assets/images/explore_1.png'),
@@ -113,6 +121,7 @@ export {
   categories,
   explore,
   products,
+  product,
   profile,
   feedProposed
 }
