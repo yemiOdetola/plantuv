@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default class Feed extends React.Component {
   state = {
-    activeTab: 'Medicinal'
+    activeTab: 'Health'
   }
 
   handleTab = (tab) => {
@@ -33,10 +33,45 @@ export default class Feed extends React.Component {
     )
   }
 
+  renderContent = () => {
+    const { product } = mocks;
+    const { activeTab } = this.state;
+    if (activeTab === 'Health' || activeTab === 'Aesthetic') {
+      return (
+        <Text style={styles.medicinalText}>{product.medicinal}</Text>
+      )
+    } else if (activeTab === 'Propositions') {
+      return (
+        <Card padding shadowDark style={styles.propCard}>
+          <TouchableOpacity style={styles.by}
+            onPress={() => alert('Take me to the profile')}>
+            <Image style={styles.byImg} source={require('../../assets/images/userA.png')} />
+            <Text>{product.byName}</Text>
+          </TouchableOpacity>
+          <Text style={styles.proposition}>{product.proposition}</Text>
+          <Block style={styles.votes}>
+            <TouchableOpacity style={styles.vote}
+              onPress={() => alert('liked')}>
+              <Ionicons name="md-arrow-round-down"
+                size={20} color={theme.colors.accent} />
+              <Text style={[styles.voteText, styles.downvote]}>downvotes({product.downvotes})</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.vote}
+              onPress={() => alert('liked')}>
+              <Ionicons name="md-arrow-round-up"
+                size={20} color={theme.colors.primary} />
+              <Text style={[styles.voteText, styles.upvote]}>upvotes({product.upvotes})</Text>
+            </TouchableOpacity>
+          </Block>
+        </Card>
+      )
+    }
+  }
+
 
   render() {
     const { product, proposed } = this.props;
-    const tabs = ['Medicinal', 'Aesthetic', 'Propositions'];
+    const tabs = ['Health', 'Aesthetic', 'Propositions'];
     return (
       <ScrollView showsVerticalScrollIndicator={false}>
         <Image style={styles.featuredImg} source={require('../../assets/images/plant.jpg')} />
@@ -53,28 +88,7 @@ export default class Feed extends React.Component {
           <Block flex={false} row style={styles.tabs}>
             {tabs.map(tab => this.renderTabs(tab))}
           </Block>
-          <Card padding shadowDark style={styles.propCard}>
-            <TouchableOpacity style={styles.by}
-              onPress={() => alert('Take me to the profile')}>
-              <Image style={styles.byImg} source={require('../../assets/images/userA.png')} />
-              <Text>Omolola Famodun</Text>
-            </TouchableOpacity>
-            <Text style={styles.proposition}>"Scent leave aids digestion. If you are the type of person that eats late at night, it is likely you will experience indigestion and bloating. Scent leave has immense health beneﬁts such as easy bowel evacuation and weight management"...</Text>
-            <Block style={styles.votes}>
-              <TouchableOpacity style={styles.vote}
-                onPress={() => alert('liked')}>
-                <Ionicons name="md-arrow-round-down"
-                  size={20} color={theme.colors.accent} />
-                <Text style={[styles.voteText, styles.downvote]}>downvotes(2)</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.vote}
-                onPress={() => alert('liked')}>
-                <Ionicons name="md-arrow-round-up"
-                  size={20} color={theme.colors.primary} />
-                <Text style={[styles.voteText, styles.upvote]}>upvotes(13)</Text>
-              </TouchableOpacity>
-            </Block>
-          </Card>
+          {this.renderContent()}
         </Block>
       </ScrollView>
     )
@@ -174,6 +188,14 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     fontWeight: '500',
     fontSize: 14,
+  },
+  medicinalText: {
+    // backgroundColor: 'yellow',
+    paddingVertical: 12,
+    paddingHorizontal: 5,
+    fontSize: 16,
+    lineHeight: 25,
+    color: '#444444',
   }
 });
 

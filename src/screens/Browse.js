@@ -43,7 +43,7 @@ export default class Browse extends React.Component {
 
   render() {
     const { profile, navigation } = this.props;
-    const tabs = ['Products', 'Inspirations', 'Shop'];
+    const tabs = ['Products', 'Inspirations', 'Shops'];
     const { categories } = this.state;
     return (
       <Block style={styles.container}>

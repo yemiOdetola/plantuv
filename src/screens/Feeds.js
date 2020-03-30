@@ -52,7 +52,6 @@ export class Feeds extends Component {
             </TouchableOpacity>
           </Block>
         </ScrollView>
-        {/* {this.renderFooter()} */}
       </Block>
     )
   }
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
   },
   feed: {
     marginVertical: 10,
-    // marginHorizontal: 5,
   },
   feedCard: {
     width: (width - (theme.sizes.padding * 2.75)),
@@ -98,9 +96,10 @@ const styles = StyleSheet.create({
     paddingTop: 10,
   },
   description: {
-    color: '#555',
+    color: theme.colors.gray,
     marginTop: 15,
-    fontSize: 13,
+    fontSize: 14,
+    lineHeight: 20,
   },
   likeText: {
     marginLeft: 5,
@@ -131,13 +130,14 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
     paddingHorizontal: 10,
     marginRight: 8,
-    borderWidth: 1,
-    borderRadius: 14,
-    borderColor: theme.colors.gray,
+    // borderWidth: 1,
+    borderRadius: 4,
+    // borderColor: theme.colors.gray2,
   },
   tagText: {
     fontSize: 11,
     marginLeft: 3,
+    color: theme.colors.gray,
   },
   overflowFix: {
     height: '90%',
